@@ -1,6 +1,6 @@
 {
   "name": "@keltroth/kanban",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Kanban is an helper to build kanban boards",
   "files": [
     "kanban.js",
