@@ -2,13 +2,10 @@
   "name": "@keltroth/kanban",
   "version": "1.0.0",
   "description": "Kanban is an helper to build kanban boards",
-  "scripts": {
-    "start": "npx http-server -p 9999"
-  },
   "files": [
     "kanban.js",
     "emitter.js"
   ],
-  "author": "",
-  "license": "ISC"
+  "author": "Django Janny",
+  "license": "MIT"
 }
