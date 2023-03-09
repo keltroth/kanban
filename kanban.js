@@ -1,4 +1,4 @@
-import { Emitter } from './emitter.js';
+import { Emitter } from '@keltroth/emitter';
 
 const signals = ['moved'];
 
@@ -10,7 +10,7 @@ const defaultOptions = {
 
 export class Kanban extends Emitter {
   constructor(options = defaultOptions) {
-    super();
+    super('Kanban');
     this.options = Object.assign(defaultOptions, options);
 
     for (const signal of signals) {
@@ -45,10 +45,6 @@ export class Kanban extends Emitter {
       id: event.target.id,
       status: event.target.closest('.column--tasks').dataset.status,
       element: event.target,
-      initialPosition: {
-        x: rect.top,
-        y: rect.left,
-      },
     };
     event.target.classList.add('dragged');
     event.target.style.top = `${rect.top}px`;

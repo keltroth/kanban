@@ -1,11 +1,13 @@
 {
   "name": "@keltroth/kanban",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Kanban is an helper to build kanban boards",
   "files": [
-    "kanban.js",
-    "emitter.js"
+    "kanban.js"
   ],
+  "dependencies": {
+    "@keltroth/emitter": "^1.0.7"
+  },
   "author": "Django Janny",
   "license": "MIT"
 }
