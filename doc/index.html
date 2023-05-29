@@ -7,7 +7,7 @@
     <title>Kanban POC</title>
     <link rel="stylesheet" href="styles.css" />
     <script defer type="module">
-      import {Kanban} from './kanban.js';
+      import {Kanban} from '../kanban.js';
       const k = new Kanban({selector: '#kanban'});
       k.on('kanban:moved', console.log);
     </script>
@@ -39,6 +39,6 @@
           <article class="kanban--task js-kanban-draggable" id="task-19">Task 19</article>
         </main>
       </article>
-    </section>  
+    </section>
   </body>
 </html>

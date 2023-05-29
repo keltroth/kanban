@@ -9,7 +9,7 @@ const defaultOptions = {
 };
 
 export class Kanban extends Emitter {
-  constructor(options = defaultOptions) {
+  constructor(options = {}) {
     super('Kanban');
     this.options = Object.assign(defaultOptions, options);
 
@@ -135,6 +135,8 @@ export class Kanban extends Emitter {
       const lastOne = event.target.querySelector('.kanban--task:last-child');
       if (lastOne) {
         lastOne.after(this.ghost.element);
+      } else {
+        event.target.append(this.ghost.element);
       }
     }
   };

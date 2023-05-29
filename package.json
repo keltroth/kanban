@@ -1,12 +1,20 @@
 {
   "name": "@keltroth/kanban",
-  "version": "1.0.2",
+  "version": "1.0.9",
   "description": "Kanban is an helper to build kanban boards",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "npx esbuild src/kanban.js --supported:const-and-let=true --bundle --minify --format=esm --outfile=kanban.js",
+    "build:dev": "npx esbuild src/kanban.js --supported:const-and-let=true --bundle --format=esm --outfile=kanban.js"
+  },
   "files": [
     "kanban.js"
   ],
-  "dependencies": {
-    "@keltroth/emitter": "^1.0.7"
+  "main": "kanban.js",
+  "devDependencies": {
+    "@keltroth/emitter": "^1.0.7",
+    "esbuild": "^0.17.11",
+    "npx": "^10.2.2"
   },
   "author": "Django Janny",
   "license": "MIT"
