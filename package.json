@@ -7,6 +7,10 @@
     "build": "npx esbuild src/kanban.js --supported:const-and-let=true --bundle --minify --format=esm --outfile=kanban.js",
     "build:dev": "npx esbuild src/kanban.js --supported:const-and-let=true --bundle --format=esm --outfile=kanban.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keltroth/kanban.git"
+  },
   "files": [
     "kanban.js"
   ],
